@@ -1,0 +1,76 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-color: rgb(15, 2, 44);
+}
+.header > h2 {
+  color: white;
+}
+.header > p > * {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(95, 131, 167);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.question-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #462d2d;
+}
+.containers {
+  padding-top: 10px;
+  display: flex;
+  gap: 0.5rem;
+  border: 2px solid black;
+  flex-wrap: wrap;
+}
+.container {
+  background-color: #eebaba;
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.container > p > * {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stars > * {
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: antiquewhite;
+  cursor: pointer;
+  rotate: 50deg;
+  margin: 5px;
+}
+
+.stars > *:hover {
+  background-color: rgb(7, 100, 240);
+}
+
+.star-selected {
+  background-color: red;
+}
