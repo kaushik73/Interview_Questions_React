@@ -1,4 +1,5 @@
 import Question from "../Question";
+import CounterApp from "./CounterApp";
 import DebounceFetch from "./DebounceFetch";
 import { HOCUseComp } from "./HOCUse";
 import ReRenderParent from "./ReRenderParent";
@@ -34,6 +35,8 @@ const LevelTwo = () => {
         achieve this.
       </Question>
       <ReRenderParent />
+      <Question>Counter App with start and pause btn</Question>
+      <CounterApp />
     </>
   );
 };

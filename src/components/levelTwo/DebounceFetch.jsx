@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 const DebounceFetch = () => {
   const [title, setTitle] = useState("");
   const [result, setResult] = useState([]);
-  const [debounceFetch, setDebounceFetch] = useState("");
+  const [debounceTitle, setDebounceTitle] = useState("");
 
   useEffect(() => {
     const handler = setTimeout(() => {
-      setDebounceFetch(title);
+      setDebounceTitle(title);
     }, 500);
 
     return () => {
@@ -15,9 +15,9 @@ const DebounceFetch = () => {
   }, [title]);
 
   useEffect(() => {
-    if (debounceFetch != "") {
+    if (debounceTitle != "") {
       fetch(
-        `https://jsonplaceholder.typicode.com/posts?title_like=${debounceFetch}`
+        `https://jsonplaceholder.typicode.com/posts?title_like=${debounceTitle}`
       )
         .then((data) => data.json())
         .then((data) => {
@@ -27,7 +27,7 @@ const DebounceFetch = () => {
     } else {
       setResult([]);
     }
-  }, [debounceFetch]);
+  }, [debounceTitle]);
 
   return (
     <div>
