@@ -1,5 +1,5 @@
 const withHRAfter = (WrappedComponent) => {
-  return function enchanceCompoent(props) {
+  return function enhancedComponent(props) {
     return (
       <>
         <WrappedComponent {...props} />

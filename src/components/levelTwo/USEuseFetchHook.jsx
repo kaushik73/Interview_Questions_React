@@ -4,7 +4,6 @@ import { useFetch } from "./useFetch";
 const USEuseFetchHook = () => {
   const [title, setTitle] = useState("");
   const [result, isLoading, error] = useFetch(title);
-  console.log("ooooo", result);
 
   return (
     <div>
@@ -16,7 +15,7 @@ const USEuseFetchHook = () => {
       {isLoading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       <ul>
-        {result.slice(0,10).map((item) => (
+        {result.slice(0, 10).map((item) => (
           <li key={item.id}>{item.title}</li>
         ))}
       </ul>

@@ -13,7 +13,6 @@ export function useTheme() {
 
 export const ThemeProvider = (props) => {
   const [isLightTheme, setIsLightTheme] = useState(true);
-  console.log(isLightTheme);
   return (
     <ThemeContext.Provider value={{ isLightTheme, setIsLightTheme }}>
       {props.children}

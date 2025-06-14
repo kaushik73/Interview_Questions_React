@@ -8,7 +8,16 @@ const ToggleTextButton = () => {
   };
   return (
     <div>
-      <button id="buttonOnOff" onClick={toggleTEXT}>{buttonContent}</button>
+      <button
+        id="buttonOnOff"
+        onClick={() =>
+          buttonContent == "ON"
+            ? setButtonContent("OFF")
+            : setButtonContent("ON")
+        }
+      >
+        {buttonContent}
+      </button>
     </div>
   );
 };

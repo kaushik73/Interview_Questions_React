@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-
+import React from "react";
 const ReRenderChild = ({ onClick, count }) => {
   console.log("ChildComponent re-rendered");
   return (
@@ -10,4 +10,4 @@ const ReRenderChild = ({ onClick, count }) => {
   );
 };
 
-export default ReRenderChild;
+export default React.memo(ReRenderChild);

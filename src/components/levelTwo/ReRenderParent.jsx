@@ -1,11 +1,11 @@
 import { useState, useCallback } from "react";
-import  ReRenderChild  from "./ReRenderChild";
+import ReRenderChild from "./ReRenderChild";
 const ReRenderParent = () => {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
 
   const increment = useCallback(() => {
-    setCount(prevCount => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
   }, []);
 
   return (
