@@ -4,6 +4,7 @@ import { WithHRControlledForm } from "./ControlledForm";
 import { WithHRToggleTextButton } from "./ToggleTextButton";
 import { WithHRChildComponent } from "./ChildComponent";
 import Question from "../Question";
+import GetAPIData2 from "./GetAPIData2";
 
 const questions = [
   {
@@ -12,7 +13,8 @@ const questions = [
   },
   {
     text: "Create a component that fetches data from an API and displays it. Use the useEffect hook for the API call.",
-    Component: GetAPIDataWithHR,
+    Component: GetAPIData2,
+    // Component: GetAPIDataWithHR,
   },
   {
     text: "Create a controlled form component in React that updates its state as the user types.",

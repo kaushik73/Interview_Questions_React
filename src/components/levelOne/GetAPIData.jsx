@@ -6,10 +6,7 @@ const GetAPIData = () => {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/todos")
       .then((res) => res.json())
-      .then((res) => {
-        setData(res);
-        console.log(res);
-      });
+      .then((res) => setData(res));
   }, []);
   if (!data) {
     return <p>loading....</p>;
